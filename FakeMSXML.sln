@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeMSXML", "FakeMSXML\FakeMSXML.vcxproj", "{F514BB00-253C-4A74-ABF8-849C3E6F199C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMSXML", "TestMSXML\TestMSXML.vcxproj", "{866A858B-39AA-43A2-8C84-6736DB7932F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x64.Build.0 = Release|x64
 		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x86.ActiveCfg = Release|Win32
 		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x86.Build.0 = Release|Win32
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x64.ActiveCfg = Debug|x64
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x64.Build.0 = Debug|x64
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x86.Build.0 = Debug|Win32
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x64.ActiveCfg = Release|x64
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x64.Build.0 = Release|x64
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x86.ActiveCfg = Release|Win32
+		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
