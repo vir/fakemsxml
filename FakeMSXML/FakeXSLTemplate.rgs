@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {986A9E2B-A4E2-45B0-82CC-E507AAE167B9} = s 'FakeXSLTemplate Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			TypeLib = s '{A3864B87-1CE8-4D28-B451-62720AA8B87D}'
+			Version = s '1.0'
+		}
+	}
+}

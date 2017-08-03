@@ -1,0 +1,136 @@
+// FakeMSXML.idl : IDL source for FakeMSXML
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FakeMSXML.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(4A9DF81E-3F81-4949-838E-2F5E70D51885),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IFakeDOMDocument : IDispatch{
+};
+[
+	object,
+	uuid(F16BDA52-20EE-45A8-AA82-BACB7EE9F179),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IFakeDOMElement : IDispatch{
+};
+[
+	object, uuid(625DE45E-D768-496B-9697-9CCDB3289EA6),
+	local, pointer_default(unique)
+]
+interface IFakeXMLInternalNode : IUnknown {
+	[propget] HRESULT InternalNode(void** pInt);
+	[propput] HRESULT InternalNode(void* pInt);
+};
+
+[
+	object,
+	uuid(95A1ADE7-8752-44F2-BB2C-037AB5AA086A),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IFakeXSLProcessor : IDispatch{
+};
+[
+	object,
+	uuid(9DEF8893-AEAE-4475-B74E-54628F29E426),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IFakeDOMParseError : IDispatch{
+};
+[
+	uuid(A3864B87-1CE8-4D28-B451-62720AA8B87D),
+	version(1.0),
+]
+library FakeMSXMLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	importlib("msxml6.dll");
+
+	[
+		uuid(4B2A76DA-4E12-4779-9E9D-562C4969BBF4)		
+	]
+	dispinterface _IFakeDOMDocumentEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(26266FC6-1E91-4638-BC6C-81A5CB8DCD49)		
+	]
+	coclass FakeDOMDocument
+	{
+		[default] interface IFakeDOMDocument;
+		[default, source] dispinterface _IFakeDOMDocumentEvents;
+	};
+	[
+		uuid(0EE2D64A-CB5D-4CF5-B395-E496708D6443)		
+	]
+	coclass FakeDOMElement
+	{
+		[default] interface IFakeDOMElement;
+	};
+	/*
+	[
+		uuid(BE371FD3-F36A-4133-AF08-17F993D0C9E3)		
+	]
+	coclass FakeDOMProcInstr
+	{
+		[default] interface IFakeDOMProcInstr;
+	};
+	[
+		uuid(EAF160C8-36EE-4325-BC30-BC667F3420C2)		
+	]
+	coclass FakeDOMAttribute
+	{
+		[default] interface IFakeDOMAttribute;
+	};
+	*/
+	[
+		uuid(986A9E2B-A4E2-45B0-82CC-E507AAE167B9)		
+	]
+	coclass FakeXSLTemplate
+	{
+		[default] interface IXSLTemplate;
+	};
+	/*
+	[
+		uuid(E5330569-DA3D-4C09-9828-A1C74DE93554)		
+	]
+	coclass FakeXSLProcessor
+	{
+		[default] interface IFakeXSLProcessor;
+	};
+	[
+		uuid(6D47D8A4-986F-48D7-B660-1088FC00C711)		
+	]
+	coclass FakeDOMParseError
+	{
+		[default] interface IFakeDOMParseError;
+	};
+	[
+		uuid(E95D8E93-9B64-4595-8E51-37FF9BF095C8)		
+	]
+	coclass FakeDOMNodeList
+	{
+		[default] interface IFakeDOMNodeList;
+	};
+	*/
+};
+
+import "shobjidl.idl";

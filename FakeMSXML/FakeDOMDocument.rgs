@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {26266FC6-1E91-4638-BC6C-81A5CB8DCD49} = s 'FakeDOMDocument Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			TypeLib = s '{A3864B87-1CE8-4D28-B451-62720AA8B87D}'
+			Version = s '1.0'
+		}
+	}
+}

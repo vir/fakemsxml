@@ -13,17 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{afa11cb2-e25f-4b51-9979-6a2f2ad4433e}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -35,5 +28,142 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="xdlldata.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeMSXML_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeDOMDocument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeXMLNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeDOMElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XStr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeDOMProcInstr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeDOMAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeXSLTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeXSLProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeDOMParseError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeDOMNodeList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dllmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdlldata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeMSXML_i.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_IFakeDOMDocumentEvents_CP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeDOMDocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeXMLNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeDOMElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XStr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeDOMProcInstr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeDOMAttribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeXSLTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeXSLProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeDOMParseError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeDOMNodeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FakeMSXML.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FakeMSXML.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeMSXML.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="FakeDOMDocument.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeXMLNode.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeDOMElement.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeDOMProcInstr.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeDOMAttribute.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeXSLTemplate.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeXSLProcessor.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeDOMParseError.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FakeDOMNodeList.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="FakeMSXML.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
   </ItemGroup>
 </Project>
