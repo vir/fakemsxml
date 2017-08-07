@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="FakeMSXML" Language="1033" Version="1.0.0.0" Manufacturer="ViR" UpgradeCode="292bc88e-c0fb-40ca-a56a-cc403841b83b">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<!-- Add/Remove programs -->
+<!--
+		<Property Id="ARPCOMMENTS" Value="xxxxxxxxxxxxxxxxxx" />
+		<Property Id="ARPCONTACT" Value="support@xxxxxxxxxx" />
+-->
+		<Property Id="ARPPRODUCTICON" Value="FakeMSXML\icon1.ico" />
+<!--
+		<Property Id="ARPHELPLINK" Value="WhatsNew.rtf" />
+		<Property Id="ARPREADME" Value="WhatsNew.rtf" />
+-->
+		<Property Id="ARPURLINFOABOUT" Value="http://github.com/vir/fakemsxml/wiki/" />
+		<Property Id="ARPURLUPDATEINFO" Value="http://github.com/vir/fakemsxml/releases/" />
+<!--
+		<Property Id="ARPHELPTELEPHONE" Value="+7-921-xxx" />
+		<Property Id="ARPAUTHORIZEDCDFPREFIX" Value="http://xxxxxxx" />
+-->
+		<Property Id="ARPSIZE" Value="3" />
+		<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+		<InstallExecuteSequence>
+			<Custom Action="SetARPINSTALLLOCATION" After="InstallValidate"></Custom>
+		</InstallExecuteSequence>
+
+
+		<Feature Id="ProductFeature" Title="FakeMSXML" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+		<Feature Id="VCRedist" Title="Visual C++ 14.0 Runtime" AllowAdvertise="no" Display="hidden" Level="1">
+			<MergeRef Id="VCRedist"/>
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="FakeMSXML" />
+			</Directory>
+			<Merge Id="VCRedist" SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC140_CRT_x86.msm" Language="0" DiskId="1" />
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="FakeMSXMLdll">
+				<File Id="FakeMSXML.dll" Source="$(var.SolutionDir)\$(var.Configuration)\FakeMSXML.dll"  KeyPath="yes">
+					<TypeLib Id="{A3864B87-1CE8-4D28-B451-62720AA8B87D}" Description="FakeMSXMLLib" Language="0" MajorVersion="1" MinorVersion="0">
+						<Class Id="26266FC6-1E91-4638-BC6C-81A5CB8DCD49"
+							Advertise="no" Context="InprocServer32"
+							Description="FakeMSXML DOM Document application class"
+							ThreadingModel="both" Programmable="yes">
+							<ProgId Id="FakeMSXML.DOMDocument.1.0" Advertise="no">
+								<ProgId Id="FakeMSXML.DOMDocument" Advertise="no" />
+							</ProgId>
+						</Class>
+						<Class Id="986A9E2B-A4E2-45B0-82CC-E507AAE167B9"
+							Advertise="no" Context="InprocServer32"
+							Description="FakeMSXML XSLT Processor Template application class"
+							ThreadingModel="both" Programmable="yes">
+							<ProgId Id="FakeMSXML.XSLTemplate.1.0" Advertise="no">
+								<ProgId Id="FakeMSXML.XSLTemplate" Advertise="no" />
+							</ProgId>
+						</Class>
+					</TypeLib>
+				</File>
+			</Component>
+			<Component Id="iconvdll">
+				<File Id="iconv.dll" Source="$(var.SolutionDir)\$(var.Configuration)\iconv.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="libxml2dll">
+				<File Id="libxml2.dll" Source="$(var.SolutionDir)\$(var.Configuration)\libxml2.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="libxsltdll">
+				<File Id="libxslt.dll" Source="$(var.SolutionDir)\$(var.Configuration)\libxslt.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="zlib1dll">
+				<File Id="zlib1.dll" Source="$(var.SolutionDir)\$(var.Configuration)\zlib1.dll" KeyPath="yes" />
+			</Component>
+			<Component Id="TestMSXMLexe">
+				<File Id="TestMSXML.exe" Source="$(var.SolutionDir)\$(var.Configuration)\TestMSXML.exe" KeyPath="yes" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

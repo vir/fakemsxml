@@ -3,9 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeMSXML", "FakeMSXML\FakeMSXML.vcxproj", "{F514BB00-253C-4A74-ABF8-849C3E6F199C}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMSXML", "TestMSXML\TestMSXML.vcxproj", "{866A858B-39AA-43A2-8C84-6736DB7932F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24} = {07847585-3F09-4D91-AD9F-19CA98AC8A24}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeMSXML", "FakeMSXML\FakeMSXML.vcxproj", "{07847585-3F09-4D91-AD9F-19CA98AC8A24}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "FakeMSXMLSetup", "FakeMSXMLSetup\FakeMSXMLSetup.wixproj", "{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24} = {07847585-3F09-4D91-AD9F-19CA98AC8A24}
+		{866A858B-39AA-43A2-8C84-6736DB7932F2} = {866A858B-39AA-43A2-8C84-6736DB7932F2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +24,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Debug|x64.ActiveCfg = Debug|x64
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Debug|x64.Build.0 = Debug|x64
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Debug|x86.ActiveCfg = Debug|Win32
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Debug|x86.Build.0 = Debug|Win32
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x64.ActiveCfg = Release|x64
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x64.Build.0 = Release|x64
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x86.ActiveCfg = Release|Win32
-		{F514BB00-253C-4A74-ABF8-849C3E6F199C}.Release|x86.Build.0 = Release|Win32
 		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x64.ActiveCfg = Debug|x64
 		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x64.Build.0 = Debug|x64
 		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Debug|x86.ActiveCfg = Debug|Win32
@@ -31,6 +32,20 @@ Global
 		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x64.Build.0 = Release|x64
 		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x86.ActiveCfg = Release|Win32
 		{866A858B-39AA-43A2-8C84-6736DB7932F2}.Release|x86.Build.0 = Release|Win32
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Debug|x64.ActiveCfg = Debug|x64
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Debug|x64.Build.0 = Debug|x64
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Debug|x86.ActiveCfg = Debug|Win32
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Debug|x86.Build.0 = Debug|Win32
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Release|x64.ActiveCfg = Release|x64
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Release|x64.Build.0 = Release|x64
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Release|x86.ActiveCfg = Release|Win32
+		{07847585-3F09-4D91-AD9F-19CA98AC8A24}.Release|x86.Build.0 = Release|Win32
+		{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}.Debug|x64.ActiveCfg = Debug|x86
+		{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}.Debug|x86.ActiveCfg = Debug|x86
+		{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}.Debug|x86.Build.0 = Debug|x86
+		{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}.Release|x64.ActiveCfg = Release|x86
+		{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}.Release|x86.ActiveCfg = Release|x86
+		{DEADD028-0631-4462-A4CA-82A9E7D7D0A0}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
