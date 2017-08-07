@@ -15,5 +15,6 @@
 
 #include <atlbase.h>
 #include <atlstr.h>
+#include <COMDEF.H>
+#include <gtest/gtest.h>
 
-// TODO: reference additional headers your program requires here
