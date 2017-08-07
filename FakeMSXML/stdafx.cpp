@@ -9,7 +9,7 @@ HRESULT ReportUnimplementedMethod(const char * cls, const char * method)
 	std::string msg(cls);
 	msg += "::";
 	msg += method;
-	::MessageBoxA(NULL, msg.c_str(), "Unimplemented method", MB_OK| MB_ICONWARNING|MB_TASKMODAL|MB_SYSTEMMODAL);
+	::MessageBoxA(::GetActiveWindow(), msg.c_str(), "FakeMSXML: Unimplemented method", MB_OK| MB_ICONWARNING|MB_TASKMODAL|MB_SYSTEMMODAL);
 	return E_NOTIMPL;
 }
 
